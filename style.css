@@ -1,0 +1,296 @@
+/* ==========================================
+   1. Universal Selector & Box Model
+========================================== */
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+
+/* ==========================================
+   2. Body Styling & Colors
+========================================== */
+
+body {
+     width: 900px;
+     margin: 40px auto;
+     padding: 40px;
+     background-color: #ffffff;
+     color: #334155;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 16px;
+     line-height: 1.8;
+     border: 1px solid #e2e8f0;
+     border-radius: 16px;
+     box-shadow: 0 10px 35px rgba(30, 41, 59, 0.12);
+}
+
+
+/* ==========================================
+   3. Heading Selectors
+========================================== */
+
+h1 {
+     color: #1e293b;
+     font-size: 38px;
+     font-weight: bold;
+     text-align: center;
+     letter-spacing: 1px;
+     margin-bottom: 5px;
+}
+
+h2 {
+     color: #4f46e5;
+     font-size: 22px;
+     font-weight: bold;
+     margin-top: 28px;
+     margin-bottom: 12px;
+     padding-bottom: 8px;
+     border-bottom: 2px solid #e0e7ff;
+}
+
+
+/* ==========================================
+   4. Pseudo-elements
+========================================== */
+
+h1::after {
+     content: "";
+     display: block;
+     width: 80px;
+     height: 4px;
+     margin: 12px auto;
+     background: linear-gradient(90deg, #6366f1, #f0b35b);
+     border-radius: 10px;
+}
+
+h2::before {
+     content: "✦ ";
+     color: #f0b35b;
+     font-size: 20px;
+}
+
+
+/* ==========================================
+   5. Text & Font Properties
+========================================== */
+
+p {
+     color: #64748b;
+     font-size: 15px;
+     line-height: 1.8;
+     margin-bottom: 12px;
+}
+
+strong {
+     color: #1e293b;
+     font-weight: bold;
+}
+
+em {
+     color: #6366f1;
+     font-style: italic;
+}
+
+
+/* ==========================================
+   6. Photo Section
+========================================== */
+
+figure {
+     text-align: center;
+     margin: 25px 0;
+}
+
+figure img {
+     width: 200px;
+     height: 200px;
+     object-fit: cover;
+     border: 5px solid #ffffff;
+     border-radius: 50%;
+     box-shadow: 0 8px 25px rgba(99, 102, 241, 0.25);
+     transition: transform 0.3s ease;
+}
+
+figcaption {
+     color: #64748b;
+     font-size: 14px;
+     font-style: italic;
+     margin-top: 12px;
+     visibility: visible;
+}
+
+
+/* ==========================================
+   7. Lists & Skills
+========================================== */
+
+ul,
+ol {
+     padding-left: 30px;
+     margin: 15px 0;
+}
+
+ul {
+     list-style-type: square;
+}
+
+ol {
+     list-style-type: decimal;
+}
+
+ul li,
+ol li {
+     padding: 8px 12px;
+     margin-bottom: 7px;
+}
+
+ul li:first-child {
+     color: #4f46e5;
+     font-weight: bold;
+}
+
+ol li:nth-child(even) {
+     background-color: #f1f5f9;
+     border-radius: 8px;
+}
+
+
+/* ==========================================
+   8. Education Table
+========================================== */
+
+table {
+     width: 100%;
+     border-collapse: collapse;
+     margin: 20px 0;
+     background-color: #ffffff;
+     border-radius: 10px;
+     overflow: hidden;
+     box-shadow: 0 4px 15px rgba(30, 41, 59, 0.08);
+}
+
+th {
+     background: linear-gradient(135deg, #3730a3, #6366f1);
+     color: #ffffff;
+     padding: 15px;
+     text-align: left;
+     font-size: 15px;
+}
+
+td {
+     padding: 13px 15px;
+     text-align: left;
+     border-bottom: 1px solid #e2e8f0;
+}
+
+tr:nth-child(even) {
+     background-color: #f1f5f9;
+}
+
+tr:nth-child(odd) {
+     background-color: #ffffff;
+}
+
+
+/* ==========================================
+   9. Experience & Achievements
+========================================== */
+
+ol li strong {
+     color: #4338ca;
+     font-size: 16px;
+}
+
+ol li p {
+     margin-top: 5px;
+     margin-bottom: 0;
+}
+
+
+/* ==========================================
+   10. Links & Pseudo-classes
+========================================== */
+
+a {
+     color: #4f46e5;
+     text-decoration: none;
+     font-weight: bold;
+
+     transition: color 0.3s ease;
+}
+
+/* Hover */
+
+a:hover {
+     color: #f59e0b;
+     text-decoration: underline;
+}
+
+/* Active */
+
+a:active {
+     color: #dc2626;
+}
+
+/* Focus */
+
+a:focus {
+     outline: 3px solid #f59e0b;
+     outline-offset: 3px;
+}
+
+
+/* ==========================================
+   11. Borders, Shadows & Visibility
+========================================== */
+
+hr {
+     border: none;
+     height: 1px;
+     background: linear-gradient(90deg,
+               transparent,
+               #cbd5e1,
+               transparent);
+     margin: 30px 0;
+}
+
+
+/* Image Hover Effect */
+
+figure img:hover {
+     transform: scale(1.05);
+}
+
+
+/* ==========================================
+   12. Footer
+========================================== */
+
+.footer {
+     text-align: center;
+     color: #64748b;
+     font-size: 14px;
+     margin-top: 25px;
+     padding-top: 20px;
+     border-top: 1px solid #e2e8f0;
+}
+
+
+/* ==========================================
+   13. Specificity & Cascade
+========================================== */
+
+/* Element selector */
+
+h2 {
+     color: #6366f1;
+}
+
+/* More specific selector */
+
+body h2 {
+     color: #4f46e5;
+}
